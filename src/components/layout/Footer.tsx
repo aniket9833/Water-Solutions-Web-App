@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -9,10 +10,13 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-teal-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">A</span>
-              </div>
-              <span className="text-xl font-bold">AquaTech Solutions</span>
+        <div className="ml-[-30px]"> <Image
+        src="/logo.png" 
+        alt="Company Logo"
+        width={300}
+        height={300}
+      /></div>
+           
             </div>
             <p className="text-gray-400 mb-4">
               Leading provider of advanced water and wastewater treatment
@@ -104,7 +108,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-teal-400" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+917709335517</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-teal-400" />
@@ -115,7 +119,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-teal-400" />
                 <span className="text-gray-400">
-                Jawahar Nagar, Akola - 444005 
+                  Jawahar Nagar, Akola - 444005
                 </span>
               </div>
             </div>
@@ -124,8 +128,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025 Jay Gajanan Water Solutions. All rights reserved. | Privacy Policy |
-            Terms of Service
+            © 2025 Jay Gajanan Water Solutions. All rights reserved. | Privacy
+            Policy | Terms of Service
           </p>
         </div>
       </div>

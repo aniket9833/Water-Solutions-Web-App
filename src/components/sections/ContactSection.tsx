@@ -43,7 +43,7 @@ Location: ${formData.location}
 Timeline: ${formData.timeline}
 Message: ${formData.message}`;
 
-    const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/+917709335517?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
@@ -80,7 +80,7 @@ Message: ${formData.message}`;
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Phone</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <p className="text-gray-600">+917709335517</p>
                 </div>
               </div>
 
@@ -100,9 +100,7 @@ Message: ${formData.message}`;
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Address</h4>
-                  <p className="text-gray-600">
-                  Jawahar Nagar, Akola - 444005 
-                  </p>
+                  <p className="text-gray-600">Jawahar Nagar, Akola - 444005</p>
                 </div>
               </div>
 
@@ -165,12 +163,14 @@ Message: ${formData.message}`;
                 <SelectTrigger>
                   <SelectValue placeholder="Select Project Type" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="text-black bg-white">
                   <SelectItem value="stp">Sewage Treatment Plant</SelectItem>
                   <SelectItem value="etp">Effluent Treatment Plant</SelectItem>
                   <SelectItem value="wtp">Water Treatment Plant</SelectItem>
                   <SelectItem value="ro">Reverse Osmosis System</SelectItem>
-                  <SelectItem value="other">Other</SelectItem>
+                  <SelectItem value="other">Ultrafiltration Plants</SelectItem>
+                  <SelectItem value="other">Demineralization Plants</SelectItem>
+
                 </SelectContent>
               </Select>
 
@@ -191,11 +191,7 @@ Message: ${formData.message}`;
                 />
               </div>
 
-              <Input
-                placeholder="Project Timeline"
-                value={formData.timeline}
-                onChange={(e) => handleInputChange("timeline", e.target.value)}
-              />
+             
 
               <Textarea
                 placeholder="Additional Requirements"
@@ -206,7 +202,7 @@ Message: ${formData.message}`;
 
               <Button
                 type="submit"
-                className="w-full gradient-bg text-white hover:opacity-90"
+                className="w-full gradient-bg text-white hover:opacity-90 bg-blue-800"
               >
                 Send Quote Request via WhatsApp
               </Button>
