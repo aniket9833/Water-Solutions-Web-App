@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,12 +18,20 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToContact = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  }, []);
+
   const menuItems = [
     { href: "#home", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#products", label: "Products" },
     { href: "#services", label: "Services" },
-    { href: "#projects", label: "Projects" },
     { href: "#contact", label: "Contact" },
   ];
 
@@ -60,7 +68,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button className="gradient-bg text-white hover:opacity-90 transition-opacity">
+            <Button 
+              onClick={scrollToContact}
+              className="gradient-bg text-white hover:opacity-90 transition-opacity bg-blue-800"
+            >
               Get Quote
             </Button>
           </div>
@@ -89,7 +100,10 @@ export default function Header() {
                 </Link>
               ))}
               <div className="px-4 py-2">
-                <Button className="w-full gradient-bg text-white">
+                <Button 
+                  onClick={scrollToContact}
+                  className="w-full gradient-bg text-white"
+                >
                   Get Quote
                 </Button>
               </div>

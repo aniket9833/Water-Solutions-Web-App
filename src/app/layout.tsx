@@ -6,7 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AquaTech Solutions - Advanced Water & Wastewater Treatment",
+  title: "JGWSE - Advanced Water & Wastewater Treatment",
   description:
     "Leading provider of water treatment, sewage treatment plants (STP), and industrial water solutions with 5+ years of experience.",
   keywords:

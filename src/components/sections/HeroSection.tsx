@@ -6,6 +6,7 @@ import { ArrowRight, Droplets, Award, Globe } from "lucide-react";
 
 export default function HeroSection() {
   const [currentStat, setCurrentStat] = useState(0);
+  const [bubbles, setBubbles] = useState<Array<{left: string, top: string, delay: string}>>([]);
 
   const stats = [
     { icon: Award, value: "5+", label: "Years Experience" },
@@ -20,6 +21,17 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, [stats.length]);
 
+  useEffect(() => {
+    // Generate random positions for bubbles on client side only
+    setBubbles(
+      Array(6).fill(0).map(() => ({
+        left: `${Math.random() * 100}%`,
+        top: `${Math.random() * 100}%`,
+        delay: `${Math.random() * 3}s`
+      }))
+    );
+  }, []);
+
   return (
     <section
       id="home"
@@ -33,14 +45,14 @@ export default function HeroSection() {
 
       {/* Animated Water Droplets */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
+        {bubbles.map((style, i) => (
           <div
             key={i}
             className="absolute w-4 h-4 bg-white/20 rounded-full water-animation"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${i * 0.5}s`,
+              left: style.left,
+              top: style.top,
+              animationDelay: style.delay,
             }}
           />
         ))}
@@ -70,8 +82,17 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-blue-600 bg-transparent"
+              onClick={() => {
+                // Create a temporary anchor element
+                const link = document.createElement('a');
+                link.href = '/brochure.pdf';
+                link.download = 'JGWSE-Brochure.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
-              Get Free Quote
+              Get Brochure
             </Button>
           </div>
 

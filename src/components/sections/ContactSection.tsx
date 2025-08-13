@@ -168,8 +168,8 @@ Message: ${formData.message}`;
                   <SelectItem value="etp">Effluent Treatment Plant</SelectItem>
                   <SelectItem value="wtp">Water Treatment Plant</SelectItem>
                   <SelectItem value="ro">Reverse Osmosis System</SelectItem>
-                  <SelectItem value="other">Ultrafiltration Plants</SelectItem>
-                  <SelectItem value="other">Demineralization Plants</SelectItem>
+                  <SelectItem value="uf">Ultrafiltration Plants</SelectItem>
+                  <SelectItem value="dm">Demineralization Plants</SelectItem>
 
                 </SelectContent>
               </Select>
