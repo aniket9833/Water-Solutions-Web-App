@@ -74,6 +74,13 @@ export default function HeroSection() {
             <Button
               size="lg"
               className="bg-white text-blue-600 hover:bg-gray-100"
+              onClick={(e) => {
+                e.preventDefault();
+                const productsSection = document.getElementById('products');
+                if (productsSection) {
+                  productsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />

@@ -56,7 +56,7 @@ export default function ProductsSection() {
         "Advanced membrane filtration for removing suspended solids and bacteria",
       image:
         "https://www.rciaquatech.com/wp-content/uploads/2025/03/Ultrafiltration-Plants-Systems-UF.jpg",
-      features: ["High Flux Rate", "Chemical Resistant", "Easy Cleaning"],
+      features: ["High Flux Rate", "Chemical Resistant", "Easy Cleaning","Low Maintenance"],
     },
     {
       title: "Demineralization Plants",
@@ -117,12 +117,21 @@ export default function ProductsSection() {
                 </div>
 
                 <Button
-                  variant="outline"
-                  className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors bg-transparent"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+  variant="outline"
+  className="
+    w-full flex items-center justify-center gap-2 
+    px-4 py-2 border border-gray-300 rounded-lg
+    text-gray-800 bg-transparent
+    transition-all duration-300 ease-in-out 
+    hover:bg-blue-600 hover:text-white hover:border-blue-600 
+    hover:shadow-md
+  "
+>
+  Learn More
+  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+</Button>
+
+
               </div>
             </div>
           ))}
