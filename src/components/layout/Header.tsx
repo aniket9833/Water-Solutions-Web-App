@@ -37,21 +37,21 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
+      className="fixed top-0 w-full z-50 bg-white shadow-md"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="ml-[-80px]">
-      <Image
-        src="/logo.png" 
-        alt="Company Logo"
-        width={300}
-        height={300}
-      />
-    </div>
+          <div className="md:ml-0">
+            <Image
+              src="/logo.png" 
+              alt="Company Logo"
+              width={180}
+              height={60}
+              className="w-[120px] h-auto md:w-[180px]"
+              priority
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -87,7 +87,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="md:hidden bg-white border-t border-black-800">
             <nav className="py-4">
               {menuItems.map((item) => (
                 <Link
