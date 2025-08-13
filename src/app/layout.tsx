@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "Leading provider of water treatment, sewage treatment plants (STP), and industrial water solutions with 5+ years of experience.",
   keywords:
     "water treatment, sewage treatment plant, STP, ETP, WTP, reverse osmosis, industrial water solutions",
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 };
 
 export default function RootLayout({
