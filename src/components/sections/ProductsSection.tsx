@@ -70,6 +70,45 @@ export default function ProductsSection() {
         "Continuous Operation",
       ],
     },
+    {
+      title: "Multi-Effect Evaporation (MEE) Plant",
+      description:
+        "Energy-efficient evaporation systems for concentration and volume reduction of industrial effluents",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpEHysgrwLwm2k3gSfs9VXXLEF2vmL23ZmRQ&s",
+      features: [
+        "High Thermal Efficiency",
+        "Corrosion Resistant",
+        "Low Operating Cost",
+        "Minimal Scaling"
+      ],
+    },
+    {
+      title: "Zero Liquid Discharge (ZLD) Systems",
+      description:
+        "Complete solution for wastewater treatment with zero liquid discharge and maximum water recovery",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv9WUhI7_3LEi8cBGn7qFYHjzEXbEnHkps5A&s",
+      features: [
+        "100% Water Recovery",
+        "Minimal Sludge Generation",
+        "Compliance Ready",
+        "Automated Operation"
+      ],
+    },
+    {
+      title: "Softening Plants",
+      description:
+        "Ion exchange based systems for water softening by removing hardness causing ions",
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrvkukn3BFyJKtRAZXUUruen72FJ64BayCQ&s",
+      features: [
+        "Removes Hardness",
+        "Low Chemical Usage",
+        "High Flow Rates",
+        "Easy Maintenance"
+      ],
+    },
   ];
 
   return (

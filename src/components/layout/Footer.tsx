@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -20,13 +20,9 @@ export default function Footer() {
             </div>
             <p className="text-gray-400 mb-4">
               Leading provider of advanced water and wastewater treatment
-              solutions with 15+ years of industry experience.
+              solutions with 5+ years of industry experience.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer" />
-            </div>
+            
           </div>
 
           {/* Quick Links */}
@@ -108,19 +104,31 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-teal-400" />
-                <span className="text-gray-400">+917709335517</span>
+                <span className="text-gray-400">+91-7709335517</span>
               </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-teal-400" />
+              <div className="flex items-start space-x-3">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
                 <span className="text-gray-400">
                   jaygajananwatersolutions@gmail.com
                 </span>
               </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-teal-400" />
-                <span className="text-gray-400">
-                  Jawahar Nagar, Akola - 444005
-                </span>
+              <div className="space-y-2">
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-5 w-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-gray-400">
+                    Jawahar Nagar, Akola - 444005
+                  </span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-5 w-5 text-teal-400 flex-shrink-0" />
+                  <span className="text-gray-400">
+                    Puneri Chopati Balewadi, Pune - 411045
+                  </span>
+                </div>
               </div>
             </div>
           </div>

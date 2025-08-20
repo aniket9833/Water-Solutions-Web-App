@@ -46,10 +46,10 @@ export default function AboutSection() {
               Our Mission
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              To provide innovative, reliable, and sustainable water treatment
-              solutions that protect the environment while meeting the diverse
-              needs of our clients across residential, commercial, and
-              industrial sectors.
+            Our commitment to delivering practical and cost-effective solutions has established our strong reputation 
+for technical excellence. We pride ourselves on achieving the highest quality outcomes while leveraging a 
+diverse range of skills to address every opportunity. This dedication ensures the successful and timely 
+completion of all projects, allowing us to meet and exceed our client's expectations consistently.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
