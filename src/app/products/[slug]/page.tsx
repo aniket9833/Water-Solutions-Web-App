@@ -125,8 +125,14 @@ const products = [
   }
 ];
 
-export default async function ProductDetail({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+// Changed: params is now a Promise in Next.js 15
+export default async function ProductDetail({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // Await the params Promise
+  const { slug } = await params;
   const product = products.find(p => p.slug === slug);
 
   if (!product) {
@@ -206,8 +212,14 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const slug = params.slug;
+// Changed: params is now a Promise in Next.js 15
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}) {
+  // Await the params Promise
+  const { slug } = await params;
   const product = products.find(p => p.slug === slug);
   
   if (!product) {
