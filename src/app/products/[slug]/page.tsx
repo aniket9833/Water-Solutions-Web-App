@@ -130,8 +130,10 @@ interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default function ProductDetail({ params }: PageProps) {
-  const product = products.find(p => p.slug === params.slug);
+export default async function ProductDetail({ params }: PageProps) {
+  // Await params.slug as required by Next.js
+  const slug = await Promise.resolve(params.slug);
+  const product = products.find(p => p.slug === slug);
 
   if (!product) {
     notFound();
@@ -211,7 +213,9 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const product = products.find(p => p.slug === params.slug);
+  // Await params.slug as required by Next.js
+  const slug = await Promise.resolve(params.slug);
+  const product = products.find(p => p.slug === slug);
   
   if (!product) {
     return {
