@@ -125,14 +125,8 @@ const products = [
   }
 ];
 
-interface PageProps {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-}
-
-export default async function ProductDetail({ params }: PageProps) {
-  // Await params.slug as required by Next.js
-  const slug = await Promise.resolve(params.slug);
+export default async function ProductDetail({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
   const product = products.find(p => p.slug === slug);
 
   if (!product) {
@@ -213,8 +207,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
-  // Await params.slug as required by Next.js
-  const slug = await Promise.resolve(params.slug);
+  const slug = params.slug;
   const product = products.find(p => p.slug === slug);
   
   if (!product) {
