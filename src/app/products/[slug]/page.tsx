@@ -125,7 +125,12 @@ const products = [
   }
 ];
 
-export default function ProductDetail({ params }: { params: { slug: string } }) {
+interface PageProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export default function ProductDetail({ params }: PageProps) {
   const product = products.find(p => p.slug === params.slug);
 
   if (!product) {
