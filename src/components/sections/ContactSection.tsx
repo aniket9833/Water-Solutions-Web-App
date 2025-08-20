@@ -100,7 +100,8 @@ Message: ${formData.message}`;
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Address</h4>
-                  <p className="text-gray-600">Jawahar Nagar, Akola - 444005</p>
+                  <p className="text-gray-600">Jawahar Nagar, Akola - 444005 &</p>
+                  <p className="text-gray-600">Puneri Chopati Balewadi, Pune - 411045</p>
                 </div>
               </div>
 

@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ProductsSection() {
   const products = [
     {
+      slug: 'sewage-treatment-plants',
       title: "Sewage Treatment Plants (STP)",
       description:
         "Advanced biological treatment systems for residential and commercial wastewater",
@@ -15,6 +17,7 @@ export default function ProductsSection() {
       features: ["Compact Design", "Low Maintenance", "Energy Efficient"],
     },
     {
+      slug: 'effluent-treatment-plants',
       title: "Effluent Treatment Plants (ETP)",
       description:
         "Industrial wastewater treatment for chemical, pharmaceutical, and textile industries",
@@ -27,6 +30,7 @@ export default function ProductsSection() {
       ],
     },
     {
+      slug: 'water-treatment-plants',
       title: "Water Treatment Plants (WTP)",
       description:
         "Municipal and industrial water purification systems for safe drinking water",
@@ -39,6 +43,7 @@ export default function ProductsSection() {
       ],
     },
     {
+      slug: 'reverse-osmosis-systems',
       title: "Reverse Osmosis Systems",
       description:
         "High-efficiency membrane technology for water desalination and purification",
@@ -51,6 +56,7 @@ export default function ProductsSection() {
       ],
     },
     {
+      slug: 'ultrafiltration-plants',
       title: "Ultrafiltration Plants",
       description:
         "Advanced membrane filtration for removing suspended solids and bacteria",
@@ -59,6 +65,7 @@ export default function ProductsSection() {
       features: ["High Flux Rate", "Chemical Resistant", "Easy Cleaning","Low Maintenance"],
     },
     {
+      slug: 'demineralization-plants',
       title: "Demineralization Plants",
       description:
         "Ion exchange systems for producing high-purity water for industrial use",
@@ -71,7 +78,8 @@ export default function ProductsSection() {
       ],
     },
     {
-      title: "Multi-Effect Evaporation (MEE) Plant",
+      slug: 'multi-effect-evaporation-plant',
+      title: "Multi-Effect Evaporation (MEE)",
       description:
         "Energy-efficient evaporation systems for concentration and volume reduction of industrial effluents",
       image:
@@ -84,7 +92,8 @@ export default function ProductsSection() {
       ],
     },
     {
-      title: "Zero Liquid Discharge (ZLD) Systems",
+      slug: 'zero-liquid-discharge-systems',
+      title: "Zero Liquid Discharge (ZLD)",
       description:
         "Complete solution for wastewater treatment with zero liquid discharge and maximum water recovery",
       image:
@@ -97,9 +106,10 @@ export default function ProductsSection() {
       ],
     },
     {
+      slug: 'softening-plants',
       title: "Softening Plants",
       description:
-        "Ion exchange based systems for water softening by removing hardness causing ions",
+        "Ion exchange based systems for water softening by removing hardness causing ions.",
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrvkukn3BFyJKtRAZXUUruen72FJ64BayCQ&s",
       features: [
@@ -155,20 +165,22 @@ export default function ProductsSection() {
                   ))}
                 </div>
 
-                <Button
-  variant="outline"
-  className="
-    w-full flex items-center justify-center gap-2 
-    px-4 py-2 border border-gray-300 rounded-lg
-    text-gray-800 bg-transparent
-    transition-all duration-300 ease-in-out 
-    hover:bg-blue-600 hover:text-white hover:border-blue-600 
-    hover:shadow-md
-  "
->
-  Learn More
-  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-</Button>
+                <Link href={`/products/${product.slug}`} className="block w-full">
+                  <Button
+                    variant="outline"
+                    className="
+                      w-full flex items-center justify-center gap-2 
+                      px-4 py-2 border border-gray-300 rounded-lg
+                      text-gray-800 bg-transparent
+                      transition-all duration-300 ease-in-out 
+                      hover:bg-blue-600 hover:text-white hover:border-blue-600 
+                      hover:shadow-md
+                    "
+                  >
+                    Learn More
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Button>
+                </Link>
 
 
               </div>
