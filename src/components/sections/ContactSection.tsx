@@ -90,7 +90,9 @@ Message: ${formData.message}`;
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Email</h4>
-                  <p className="text-gray-600">info@aquatechsolutions.com</p>
+                  <p className="text-gray-600">
+                    jaygajananwatersolutions@gmail.com
+                  </p>
                 </div>
               </div>
 
@@ -100,8 +102,12 @@ Message: ${formData.message}`;
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Address</h4>
-                  <p className="text-gray-600">Jawahar Nagar, Akola - 444005 &</p>
-                  <p className="text-gray-600">Puneri Chopati Balewadi, Pune - 411045</p>
+                  <p className="text-gray-600">
+                    Jawahar Nagar, Akola - 444005 &
+                  </p>
+                  <p className="text-gray-600">
+                    Puneri Chopati Balewadi, Pune - 411045
+                  </p>
                 </div>
               </div>
 
@@ -171,7 +177,6 @@ Message: ${formData.message}`;
                   <SelectItem value="ro">Reverse Osmosis System</SelectItem>
                   <SelectItem value="uf">Ultrafiltration Plants</SelectItem>
                   <SelectItem value="dm">Demineralization Plants</SelectItem>
-
                 </SelectContent>
               </Select>
 
@@ -191,8 +196,6 @@ Message: ${formData.message}`;
                   }
                 />
               </div>
-
-             
 
               <Textarea
                 placeholder="Additional Requirements"
