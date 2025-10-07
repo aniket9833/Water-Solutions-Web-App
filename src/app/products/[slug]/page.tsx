@@ -194,9 +194,9 @@ const products = [
 export default async function ProductDetail({
   params,
 }: {
-  params: { slug: string }; // Remove Promise wrapper
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params; // No need to await
+  const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
 
   if (!product) {
@@ -315,9 +315,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }; // Remove Promise wrapper
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = params; // No need to await
+  const { slug } = await params;
   const product = products.find((p) => p.slug === slug);
 
   if (!product) {
