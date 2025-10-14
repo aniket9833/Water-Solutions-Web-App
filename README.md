@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Live Link: [https://water-solutions-web-app.vercel.app/](https://water-solutions-web-app.vercel.app/)
+## Live Link: [https://jgwses.com](https://jgwses.com)
 
 A modern, responsive marketing website built as a freelance project for a water treatment solutions company. The site showcases products and services, highlights company stats, and provides an easy path for users to request quotes and download the brochure.
 
